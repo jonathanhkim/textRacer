@@ -4,14 +4,19 @@ import {
     Text,
   } from 'react-native';
 
-import { Input } from 'react-native-elements';
+import { Input, Button } from 'react-native-elements';
 
 
 const TextInput = (props) => {
-  const { handleChange } = props
+  const { handleChange, errors } = props
     return (
         <>
-            <Input onChange={ handleChange } placeholder='Just start typing whenever you are ready' />
+            <Input 
+            onChange={ handleChange } 
+            errorMessage={props.errors}
+            errorStyle={{color: 'red'}}
+            placeholder='Just start typing whenever you are ready' />
+            <Button onPress={props.reset} title="Restart"></Button>
         </>
 
     );

@@ -7,8 +7,10 @@ import TypePathText from './typePath.js';
 // this is the input box that will hold the string
 import TextInput from './textInput.js';
 
+// this is the page shown after you finish
+import Results from './results.js';
 
 
 
 
-export { Body, TypePathText, TextInput };
+export { Body, TypePathText, TextInput, Results };
